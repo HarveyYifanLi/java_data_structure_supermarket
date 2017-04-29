@@ -11,3 +11,5 @@ Class Customer defines the data and behaviour for customers of the supermarket.
 
 The classes Person, Employee, Manager, SalesPerson, and EmployeeCustomer specify data representation
 for persons, employees, managers, sales persons, and customers who are employees of the supermarket.
+
+The test class containing the main() method is in file test.java
