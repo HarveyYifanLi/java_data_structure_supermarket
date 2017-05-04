@@ -262,5 +262,16 @@ class Merchandise{
 		return price;
 	}
 }
-
+class NoSuchMerchandiseOrdered extends Exception {
+	public Merchandise p;
+	public int newQuantity;
+	
+	NoSuchMerchandiseOrdered(Merchandise m, int q){
+		super("No merchandise "+m.name + " is ordered");
+		p = m;
+		newQuantity = q;
+	}
+}
+	
+	
 	
