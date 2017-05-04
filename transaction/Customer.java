@@ -211,7 +211,22 @@ class Order{
 	Item[] getItems(){
 		return items;
 	}
-	
+	Item findItem(Merchandise p){
+		if (items == null) return null;
+		for(int i =0; i<items.length; i++)
+			if (items[i]!=null && items[i].merchandise == p)
+				return items[i];
+		return null;
+	}
+	void changeQuantity(Merchandise p, int newQuantity) throws NoSuchMerchandiseOrdered {
+		Item item = findItem(p);
+		
+		if(item == null)
+			throw new NoSuchMerchandiseOrdered(p,newQuantity);
+		
+		item.quantity = newQuantity;
+	}
+
 }
 
 class Item{
